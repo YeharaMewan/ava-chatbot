@@ -119,7 +119,7 @@ This command will start a Docker Compose application with three services:
 
 * A Qdrant Database (http://localhost:6333/dashboard)
 * A Chainlit interface (http://localhost:8000)
-* A FastAPI application (http://localhost:8070/docs)
+* A FastAPI application (http://localhost:8030/docs)
 
 The FastAPI application is necessary for the WhatsApp integration, but that's something we will cover in Lesson 6. So, for now,
 you can ignore it. Simply click the link to the Chainlit interface to start interacting with Ava.

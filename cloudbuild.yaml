@@ -7,7 +7,7 @@ steps:
   entrypoint: gcloud
   args: ['run', 'deploy', 'ava', 
   '--image', '$LOCATION-docker.pkg.dev/$PROJECT_ID/ava-app/app:latest', 
-  '--port', '8070',
+  '--port', '8030',
   '--region', '$LOCATION',
   '--platform', 'managed',
   '--allow-unauthenticated',

@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
 COPY uv.lock pyproject.toml README.md /app/
 
 # Install the application dependencies
-RUN uv sync --frozen --no-cache || pip install triton==3.1.0 --no-deps
+RUN uv sync --frozen --no-cache
 
 # Copy your application code into the container
 COPY src/ /app/
@@ -33,7 +33,7 @@ RUN uv pip install -e .
 VOLUME ["/app/data"]
 
 # Expose the port
-EXPOSE 8070
+EXPOSE 8030
 
 # Run the FastAPI app using uvicorn
-CMD ["/app/.venv/bin/fastapi", "run", "ai_companion/interfaces/whatsapp/webhook_endpoint.py", "--port", "8070", "--host", "0.0.0.0"]
+CMD ["/app/.venv/bin/fastapi", "run", "ai_companion/interfaces/whatsapp/webhook_endpoint.py", "--port", "8030", "--host", "0.0.0.0"]

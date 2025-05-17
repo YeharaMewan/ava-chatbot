@@ -134,7 +134,7 @@ async def memory_extraction_node(state: AICompanionState):
 
 def memory_injection_node(state: AICompanionState):
     """Retrieve and inject relevant memories into the character card."""
-    memory_manager = get_memory_manager() #both reading and writing qdrant
+    memory_manager = get_memory_manager()
 
     # Get relevant memories based on recent conversation
     recent_context = " ".join([m.content for m in state["messages"][-3:]])

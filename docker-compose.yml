@@ -29,7 +29,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8070:8070"
+      - "8030:8030"
     env_file:
       - .env
     environment:
